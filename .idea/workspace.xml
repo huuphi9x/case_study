@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fba4d5af-5817-46bc-90e1-83156a394af1" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Pm4rBLTYJVZYAv2RAhHaCCHWh6" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lee\WebstormProjects\case_study_demo\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.infoClub.html">
+    <configuration name="classManageProduct.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/classManageProduct.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="infoClub.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/infoClub.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="users_displayt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/users_displayt.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="main_club.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="main_club.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="main_player.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="main_player.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.infoClub.html" />
+        <item itemvalue="JavaScript Debug.classManageProduct.html" />
+        <item itemvalue="Node.js.main_club.js" />
+        <item itemvalue="JavaScript Debug.users_displayt.html" />
+        <item itemvalue="Node.js.main_player.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fba4d5af-5817-46bc-90e1-83156a394af1" name="Default Changelist" comment="" />
+      <created>1566466133573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566466133573</updated>
+      <workItem from="1566466134651" duration="2745000" />
+      <workItem from="1566528392481" duration="609000" />
+      <workItem from="1566650585804" duration="4652000" />
+      <workItem from="1566782219510" duration="188000" />
+      <workItem from="1566791783751" duration="879000" />
+      <workItem from="1566805116459" duration="149000" />
+      <workItem from="1566805695545" duration="2042000" />
+      <workItem from="1566813913459" duration="601000" />
+      <workItem from="1566828051600" duration="5263000" />
+      <workItem from="1566833428113" duration="9548000" />
+      <workItem from="1566873381552" duration="21338000" />
+      <workItem from="1566919099241" duration="7358000" />
+      <workItem from="1566955221572" duration="7869000" />
+      <workItem from="1566964219119" duration="18348000" />
+      <workItem from="1566985988870" duration="477000" />
+      <workItem from="1567004391206" duration="8108000" />
+      <workItem from="1567041231795" duration="11423000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/main_player.js</url>
+          <line>5</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Cầu Thủ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<style>
+
+    button {
+        width: 250px;
+    }
+
+
+
+    .tabledisplay {
+        position: center;
+        border: 1px solid darkblue;
+    }
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .bg {
+        background-image: url("images/background.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .login{
+        color: aliceblue;
+    }
+    td {
+        color: crimson;
+    }
+
+</style>
+<div class="bg">
+    <center><h1 style="color: aliceblue">Thư Viện Cầu Thủ Bóng Đá</h1></center>
+    <center><input id="search" type="text" placeholder="Player name,Football Club name,etc..." style="width: 1000px ; height: 40px">
+        <button><i class="material-icons" style="height: 30px">search</i></button>
+    </center>
+    <div>
+        <div style="display: inline-block; width: 300px; border: solid aliceblue 1px; padding: 20px;">
+
+            <p class="login">ADMIN USERNAME:</p>
+            <input type="text" id="username">
+            <p class="login">PASSWORD:</p>
+            <input type="password" id="password"><br>
+            <button  style="width:100px " onclick="logInAdmin()">Login</button>
+        </div>
+        <div style="display: inline-block; margin-left: 50px; ">
+            <p id="table" class="tabledisplay">
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="player.js"></script>
+<script src="football_club.js"></script>
+<script src="main_club.js"></script>
+<script>
+    function logInAdmin() {
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        if (username == 'Admin' && password == 'admin') {
+            return window.location = "classManageProduct.html";
+        }
+    }
+    let countClubId=1;
+    function loadTableDisplay() {
+        let displayTable;
+        if (listClub.length > 0) {
+            clubTable = "<table style='border: solid 1px black'>";
+            clubTable += "<tr>" +
+                "<td>STT</td>" +
+                "<td>Tên Đội Bóng</td>" +
+                "<td>Quốc Gia</td>" +
+                "<td>Sân Vận Động</td>" +
+                "</tr>";
+            for (let i = 0; i < listClub.length; i++) {
+                clubTable += "<tr>" +
+                    "<td>" + countClubId++ + "</td>" +
+                    "<td><button class='clubbtn' onclick='myFunction()' id='nameClub" + listClub[i].clubId +"'>"+listClub[i].clubName+"</button></td>" +
+                    "<td><input id='nationalClub" + listClub[i].clubId + "' value='" + listClub[i].clubNational + "' disabled/></td>" +
+                    "<td><input id='stadium" + listClub[i].clubId + "' value='" + listClub[i].stadium + "' disabled/></td>" +
+                    "</tr>";
+            }
+            clubTable += "</table>";
+            return clubTable;
+        }
+        return "";
+    }
+    document.getElementById("table").innerHTML = loadTableDisplay();
+</script>
+</html>
