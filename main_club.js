@@ -14,7 +14,7 @@ function loadTable() {
         for (let i = 0; i < listClub.length; i++) {
             clubTable += "<tr>" +
                 "<td>" + listClub[i].clubId + "</td>" +
-                "<td><button class='clubbtn' onclick='moveToManagePlayer()' id='nameClub" + listClub[i].clubId + "'>" + listClub[i].clubName + "</button></td>" +
+                "<td><button onclick='moveToManagePlayer()' id='nameClub" + listClub[i].clubId + "'>" + listClub[i].clubName + "</button></td>" +
                 "<td><input id='nationalClub" + listClub[i].clubId + "' value='" + listClub[i].clubNational + "' disabled/></td>" +
                 "<td><input id='stadium" + listClub[i].clubId + "' value='" + listClub[i].stadium + "' disabled/></td>" +
                 "<td>" +
@@ -60,7 +60,7 @@ function remove(id) {
 }
 
 function edit(id) {
-    let newName = document.getElementById("nameClub" + id).value;
+    let newName = document.getElementById("nameClub" + id).textContent;
     let newNational = document.getElementById("nationalClub" + id).value;
     let newStadium = document.getElementById("stadium" + id).value;
     for (let i = 0; i < listClub.length; i++) {
@@ -73,7 +73,7 @@ function edit(id) {
     }
     updateDatabase(listClub);
     loadTable();
-    document.getElementById("nameClub" + id).disabled = true;
+    document.getElementById("nameClub" + id).disabled = false;
     document.getElementById("nationalClub" + id).disabled = true;
     document.getElementById("stadium" + id).disabled = true;
     document.getElementById("btnOk" + id).hidden = true;

@@ -57,8 +57,10 @@ function addPlayer() {
 
     listPlayer.push(new Player(playerId, playerName, age, playerNational, ovr, position,nameClub));
     updateDatabase(listPlayer);
-    loadTablePlayer(listPlayer,'edit');
+    document.getElementById('tablePlayer').innerHTML=  loadTablePlayer(listPlayer,'edit');
 }
+
+
 
 
 function removePlayer(id) {
@@ -70,6 +72,7 @@ function removePlayer(id) {
     }
     updateDatabase(listPlayer);
     loadTablePlayer(listPlayer,'edit');
+    document.getElementById('tablePlayer').innerHTML=  loadTablePlayer(listPlayer,'edit');
 
 }
 

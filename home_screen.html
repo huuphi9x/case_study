@@ -79,7 +79,7 @@
 
     let countClubId = 1;
 
-    function loadTableDisplay() {
+    function loadTableDisplay(listClub) {
         let clubTable;
         if (listClub.length > 0) {
             clubTable = "<table style='border: solid 1px black'>";
@@ -103,7 +103,7 @@
         return "";
     }
 
-    document.getElementById("table").innerHTML = loadTableDisplay();
+    document.getElementById("table").innerHTML = loadTableDisplay(listClub);
 
     function myFunction(index) {
         let clubName = listClub[index].clubName;
@@ -112,14 +112,16 @@
             window.location = "info_club.html?clubName=" + clubName;
         }
     }
-
-    // function search() {
-    //     let search = document.getElementById('search').value;
-    //     for (let i = 0; i < listClub.length; i++) {
-    //         if (search == listClub[i].clubName) {
-    //             document.getElementById('table').innerHTML = loadTableDisplay(listClub[i].clubName +listClub[i].clubNational+listClub[i].stadium);
-    //         }
-    //     }
-    // }
+    loadTableDisplay(listClub);
+    function searchClub() {
+        let search = document.getElementById('search').value;
+        let arrSearchClub =[];
+        for (let i = 0; i < listClub.length; i++) {
+            if (search == listClub[i].clubName) {
+              arrSearchClub.push(listClub[i]);
+            }
+        }
+        document.getElementById('table').innerHTML = loadTableDisplay(arrSearchClub);
+    }
 </script>
 </html>
