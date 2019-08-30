@@ -16,9 +16,13 @@
 <input id="age" type="text" placeholder="Nhập Tuổi">
 <input id="ovr" type="text" placeholder="Nhập Chỉ Số">
 <input id="position" type="text" placeholder="Nhập Vị Trí Đá">
+<input id="nameClub" type="text" placeholder="Nhập Câu Lạc Bộ Đang Đá">
 <button onclick="addPlayer()">Add</button>
 <p id="tablePlayer">
 </body>
 <script src="player.js"></script>
 <script src="main_player.js"></script>
+<script>
+    document.getElementById('tablePlayer').innerHTML =loadTablePlayer(listPlayer,'edit');
+</script>
 </html>

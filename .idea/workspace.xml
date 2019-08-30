@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fba4d5af-5817-46bc-90e1-83156a394af1" name="Default Changelist" comment="" />
+    <list default="true" id="fba4d5af-5817-46bc-90e1-83156a394af1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info_club.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classManageProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/manageClub.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infoClub.html" beforeDir="false" afterPath="$PROJECT_DIR$/manage_player.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_club.js" beforeDir="false" afterPath="$PROJECT_DIR$/main_club.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_player.js" beforeDir="false" afterPath="$PROJECT_DIR$/main_player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users_displayt.html" beforeDir="false" afterPath="$PROJECT_DIR$/home_screen.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,14 +21,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Pm4rBLTYJVZYAv2RAhHaCCHWh6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
@@ -38,14 +53,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.infoClub.html">
-    <configuration name="classManageProduct.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/classManageProduct.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.manage_player.html">
+    <configuration name="home_screen.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/home_screen.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="infoClub.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/infoClub.html" useBuiltInWebServerPort="true">
+    <configuration name="manageClub.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/manageClub.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="users_displayt.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/users_displayt.html" useBuiltInWebServerPort="true">
+    <configuration name="manage_player.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/case_study_demo/manage_player.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="main_club.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="main_club.js" working-dir="$PROJECT_DIR$">
@@ -56,10 +71,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.infoClub.html" />
-        <item itemvalue="JavaScript Debug.classManageProduct.html" />
+        <item itemvalue="JavaScript Debug.manage_player.html" />
+        <item itemvalue="JavaScript Debug.manageClub.html" />
         <item itemvalue="Node.js.main_club.js" />
-        <item itemvalue="JavaScript Debug.users_displayt.html" />
+        <item itemvalue="JavaScript Debug.home_screen.html" />
         <item itemvalue="Node.js.main_player.js" />
       </list>
     </recent_temporary>
@@ -90,23 +105,26 @@
       <workItem from="1566964219119" duration="18348000" />
       <workItem from="1566985988870" duration="477000" />
       <workItem from="1567004391206" duration="8108000" />
-      <workItem from="1567041231795" duration="11423000" />
+      <workItem from="1567041231795" duration="17440000" />
+      <workItem from="1567101813169" duration="2980000" />
+      <workItem from="1567126790551" duration="18713000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/main_player.js</url>
-          <line>5</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

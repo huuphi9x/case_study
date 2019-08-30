@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông Tin Câu Lạc Bộ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<style>
+
+    .tabledisplayClub {
+        position: center;
+    }
+
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .bg {
+        background-image: url("images/background.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .login {
+        color: aliceblue;
+    }
+
+    td {
+        color: crimson;
+    }
+
+</style>
+<div class="bg">
+    <center><h1 style="color: aliceblue">Danh Sách Cầu Thủ Của Đội Bóng</h1></center>
+    <p id="tablePlayer" class="tabledisplayClub">
+</div>
+</body>
+<script src="player.js"></script>
+<script src="football_club.js"></script>
+<script src="main_player.js"></script>
+<script src="main_club.js"></script>
+<script>
+    let queryString=location.search;
+    let clubName=queryString.replace("%20"," ");
+    let index=queryString.indexOf('=');
+    clubName=clubName.slice(index+1);
+    document.getElementById("tablePlayer").innerHTML =loadTablePlayer(classifyPlayer());
+
+    function classifyPlayer() {
+        let playerOfClub = [];
+        for (let i = 0; i < listPlayer.length; i++) {
+            if (listPlayer[i].nameClub == clubName) {
+                playerOfClub.push(new Player(listPlayer[i].playerId, listPlayer[i].playerName, listPlayer[i].national, listPlayer[i].age, listPlayer[i].ovr, listPlayer[i].position, listPlayer[i].nameClub));
+            }
+        }
+        return playerOfClub;
+    }
+</script>
+</html>

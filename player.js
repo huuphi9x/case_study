@@ -1,10 +1,11 @@
-function Player(playerId, playerName, age, national, ovr, position) {
+function Player(playerId, playerName, age, national, ovr, position,nameClub) {
     this.playerId = playerId;
     this.playerName = playerName;
     this.age = age;
     this.national = national;
     this.ovr = ovr;
     this.position = position;
+    this.nameClub =nameClub;
 
     this.getPlayerId = function () {
         return this.playerId;
@@ -51,6 +52,14 @@ function Player(playerId, playerName, age, national, ovr, position) {
 
     this.setPosition = function (position) {
         this.position = position;
+    };
+
+
+    this.getNameClub = function () {
+        return this.nameClub;
+    };
+    this.setNameClub = function (nameClub) {
+        this.nameClub = nameClub;
     };
 
 }

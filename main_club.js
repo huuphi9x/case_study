@@ -1,5 +1,3 @@
-
-
 let listClub = getClubs();
 
 function loadTable() {
@@ -10,13 +8,13 @@ function loadTable() {
             "<td>ID</td>" +
             "<td>Tên Đội Bóng</td>" +
             "<td>Quốc Gia</td>" +
-            "<td>Sân Vận Động</td>" +
+            "<td>Sân Vận Động</td>"+
             "<td>Chỉnh Sửa</td>" +
             "</tr>";
         for (let i = 0; i < listClub.length; i++) {
             clubTable += "<tr>" +
                 "<td>" + listClub[i].clubId + "</td>" +
-                "<td><input onclick='myFunction()' id='nameClub" + listClub[i].clubId + "' value='" + listClub[i].clubName + "'></td>" +
+                "<td><button class='clubbtn' onclick='moveToManagePlayer()' id='nameClub" + listClub[i].clubId + "'>" + listClub[i].clubName + "</button></td>" +
                 "<td><input id='nationalClub" + listClub[i].clubId + "' value='" + listClub[i].clubNational + "' disabled/></td>" +
                 "<td><input id='stadium" + listClub[i].clubId + "' value='" + listClub[i].stadium + "' disabled/></td>" +
                 "<td>" +
@@ -133,10 +131,11 @@ function generateId() {
         return 1;
     }
 }
-function myFunction() {
-    let r = confirm("Bạn Muốn Xem Danh Sách Cầu Thủ Của Đội Bóng?\nChọn OK hoặc Cancel.");
-    if (r == true) {
-        return window.location = "infoClub.html";
+
+function moveToManagePlayer() {
+    let r = confirm("Bạn Muốn Chỉnh Sửa Danh Sách Cầu Thủ Của Đội Bóng Không?\nChọn OK hoặc Cancel.");
+    if (r) {
+        return window.location = "manage_player.html";
     }
 }
 

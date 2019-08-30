@@ -1,9 +1,8 @@
 //resetDatabase();
 let listPlayer = getPlayers();
-document.getElementById("tablePlayer").innerHTML = loadTablePlayer();
-
-function loadTablePlayer() {
+function loadTablePlayer(listPlayer,action) {
     let playerTable;
+    let countPlayer =1;
     if (listPlayer.length > 0) {
         playerTable = "<table style='border: solid 1px black'>";
         playerTable += "<tr>" +
@@ -11,32 +10,35 @@ function loadTablePlayer() {
             "<td>Tên Cầu Thủ</td>" +
             "<td>Quốc Gia</td>" +
             "<td>Tuổi</td>" +
-            "<td>ORV</td>" +
+            "<td>OVR</td>" +
             "<td>Vị Trí</td>" +
-            "<td>Chỉnh Sửa</td>" +
-            "</tr>";
+            "<td>Tên Câu Lạc Bộ</td>";
+            if(action=='edit') {
+               playerTable+= "<td>Chỉnh Sửa</td>";
+            }
+           playerTable+= "</tr>";
         for (let i = 0; i < listPlayer.length; i++) {
             playerTable += "<tr>" +
-                "<td>" + listPlayer[i].playerId + "</td>" +
+                "<td>" + countPlayer++ + "</td>" +
                 "<td><input id='name" + listPlayer[i].playerId + "' value='" + listPlayer[i].playerName + "' disabled/></td>" +
                 "<td><input id='national" + listPlayer[i].playerId + "' value='" + listPlayer[i].national + "' disabled/></td>" +
                 "<td><input id='age" + listPlayer[i].playerId + "' value='" + listPlayer[i].age + "' disabled/></td>" +
                 "<td><input id='ovr" + listPlayer[i].playerId + "' value='" + listPlayer[i].ovr + "' disabled/></td>" +
                 "<td><input id='position" + listPlayer[i].playerId + "' value='" + listPlayer[i].position + "' disabled/></td>" +
-                "<td>" +
-                "<button id='btnOk1" + listPlayer[i].playerId + "' onclick='editPlayer(" + listPlayer[i].playerId + ")' hidden>OK</button>" +
-                "<button onclick='removePlayer(" + listPlayer[i].playerId + ")'><i class='fa fa-trash' style='size: A3'></i></button>" +
-                "<button onclick='openEditPlayer(" + listPlayer[i].playerId + ")'>Edit</button>" +
-                "</td>" +
-                "</tr>";
+                "<td><input id='nameClub" + listPlayer[i].playerId + "' value='" + listPlayer[i].nameClub + "' disabled/></td>";
+                if(action=='edit'){
+                    playerTable+="<td>" +
+                    "<button id='btnOk1" + listPlayer[i].playerId + "' onclick='editPlayer(" + listPlayer[i].playerId + ")' hidden>OK</button>" +
+                    "<button onclick='removePlayer(" + listPlayer[i].playerId + ")'><i class='fa fa-trash' style='size: A3'></i></button>" +
+                    "<button onclick='openEditPlayer(" + listPlayer[i].playerId + ")'>Edit</button>" +
+                    "</td>";
+                }
+                playerTable+= "</tr>";
         }
         playerTable += "</table>";
-        document.getElementById("tablePlayer").innerHTML = playerTable;
         return playerTable;
-    } else {
-        document.getElementById("tablePlayer").innerHTML = "empty";
-        return 'empty';
     }
+        return 'empty';
 }
 
 
@@ -47,14 +49,15 @@ function addPlayer() {
     let playerNational = document.getElementById('national').value;
     let ovr = document.getElementById('ovr').value;
     let position = document.getElementById('position').value;
-    if (playerName == '' || age == '' || playerNational == '' || ovr == '' || position == '') {
+    let nameClub = document.getElementById('nameClub').value;
+    if (playerName == '' || age == '' || playerNational == '' || ovr == '' || position == ''|| nameClub == '') {
         alert("Phải Nhập Đủ Thông Tin");
         return;
     }
 
-    listPlayer.push(new Player(playerId, playerName, age, playerNational, ovr, position));
+    listPlayer.push(new Player(playerId, playerName, age, playerNational, ovr, position,nameClub));
     updateDatabase(listPlayer);
-    loadTablePlayer();
+    loadTablePlayer(listPlayer,'edit');
 }
 
 
@@ -65,16 +68,18 @@ function removePlayer(id) {
             break;
         }
     }
-    loadTablePlayer();
     updateDatabase(listPlayer);
+    loadTablePlayer(listPlayer,'edit');
+
 }
 
 function editPlayer(id) {
     let newPlayerName = document.getElementById("name" + id).value;
-    let newAge = document.getElementById("national" + id).value;
-    let newPlayerNational = document.getElementById("age" + id).value;
+    let newPlayerNational = document.getElementById("national" + id).value;
+    let newAge = document.getElementById("age" + id).value;
     let newOvr = document.getElementById("ovr" + id).value;
     let newPosition = document.getElementById("position" + id).value;
+    let newNameClub = document.getElementById("nameClub" + id).value;
     for (let i = 0; i < listPlayer.length; i++) {
         if (id === listPlayer[i].playerId) {
             listPlayer[i].setPlayerName(newPlayerName);
@@ -82,16 +87,18 @@ function editPlayer(id) {
             listPlayer[i].setNational(newPlayerNational);
             listPlayer[i].setOvr(newOvr);
             listPlayer[i].setPosition(newPosition);
+            listPlayer[i].setNameClub(newNameClub);
             break;
         }
     }
     updateDatabase(listPlayer);
-    loadTablePlayer();
+    loadTablePlayer(listPlayer,'edit');
     document.getElementById("name" + id).disabled = true;
     document.getElementById("national" + id).disabled = true;
     document.getElementById("age" + id).disabled = true;
     document.getElementById("ovr" + id).disabled = true;
     document.getElementById("position" + id).disabled = true;
+    document.getElementById("nameClub" + id).disabled = true;
     document.getElementById("btnOk1" + id).hidden = true;
 }
 
@@ -101,6 +108,7 @@ function openEditPlayer(id) {
     document.getElementById("age" + id).disabled = false;
     document.getElementById("ovr" + id).disabled = false;
     document.getElementById("position" + id).disabled = false;
+    document.getElementById("nameClub" + id).disabled = false;
     document.getElementById("btnOk1" + id).hidden = false;
 }
 function getPlayersDatabase() {
@@ -127,6 +135,7 @@ function getPlayers() {
         tempPlayer.setNational(player.national);
         tempPlayer.setOvr(player.ovr);
         tempPlayer.setPosition(player.position);
+        tempPlayer.setNameClub(player.nameClub);
         players.push(tempPlayer);
     }
     return players;
